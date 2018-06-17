@@ -1,0 +1,50 @@
+.about-me {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 1.5em;
+}
+
+.about-me__heading {
+  font-size: 2em;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 0.1em;
+}
+
+.about-me__paragraph {
+  font-family: 'Roboto', sans-serif;
+  color:#666666;
+  font-size: 1em;
+  font-weight: 200;
+  padding-bottom: 1em;
+}
+
+.about-me--padding-right {
+  padding-right: 1em;
+}
+
+.about-me__contact {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding-bottom: 0.6em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.about-me__contact-title {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #252525;
+}
+
+.about-me__contact-info {
+  color: #666666;
+  font-weight: 200;
+  font-size: 0.8em;
+}
+
+.about-me__image {
+  background-image: url('../../assets/images/me.jpg');
+  background-size:cover;
+  background-position: center;
+}

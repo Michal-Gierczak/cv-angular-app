@@ -7,20 +7,20 @@
   grid-template-columns: 50% 50%;
 }
 
-.header-logo {
+.header__logo {
   padding-left: 1.5em;
   font-size: 1.5em;
   align-self: center;
   color: #252525;
 }
 
-.header-menu {
+.header__menu {
   list-style: none;
   text-align: right;
   align-self: center;
 }
 
-.header-menu li {
+.header__menu-list {
   display: inline;
   list-style: none;
   padding-left: 1em;
@@ -29,13 +29,13 @@
   text-transform: uppercase;
 }
 
-.header-menu li a {
+.header__menu-link {
   text-decoration: none;
   color: #252525;
 }
 
-.header-menu li a:hover {
+.header__menu-link:hover {
   text-decoration: underline;
   color: #69B6E1;
-  transition: color 0.3s;
+  transition: color 0.5s;
 }

@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { AboutMeComponent } from './content/about-me/about-me.component';
-import { SkillsComponent } from './content/skills/skills.component';
-import { SkillsItemComponent } from './content/skills/skills-item/skills-item.component';
-import { ExperienceComponent } from './content/experience/experience.component';
-import { ExperienceItemComponent } from './content/experience/experience-item/experience-item.component';
-import { EducationComponent } from './content/education/education.component';
-import { EducationItemComponent } from './content/education/education-item/education-item.component';
-import { AwardsComponent } from './content/awards/awards.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { SkillsComponent } from './skills/skills.component';
+import { SkillsItemComponent } from './skills/skills-item/skills-item.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ExperienceItemComponent } from './experience/experience-item/experience-item.component';
+import { EducationComponent } from './education/education.component';
+import { EducationItemComponent } from './education/education-item/education-item.component';
+import { AwardsComponent } from './awards/awards.component';
 import { FooterComponent } from './footer/footer.component';
-import { ContentComponent } from './content/content.component';
+
 
 @NgModule({
   declarations: [
@@ -26,8 +26,7 @@ import { ContentComponent } from './content/content.component';
     EducationComponent,
     EducationItemComponent,
     AwardsComponent,
-    FooterComponent,
-    ContentComponent
+    FooterComponent,    
   ],
   imports: [
     BrowserModule

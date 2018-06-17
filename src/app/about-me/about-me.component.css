@@ -1,4 +1,8 @@
 .about-me {
+  border-bottom: 0.08em solid #ECF0F1;
+}
+
+.about-me--layout {
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 1.5em;

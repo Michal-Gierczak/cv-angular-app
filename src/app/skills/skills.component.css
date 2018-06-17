@@ -1,4 +1,8 @@
 .skills {
+  border-bottom: 0.08em solid #ECF0F1;;
+}
+
+.skills--layout {
   display: grid;
   grid-template-columns: 33% 67%;
   color: #252525;

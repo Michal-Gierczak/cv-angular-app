@@ -1,3 +1,19 @@
-<p>
-  experience-item works!
-</p>
+<div *ngFor="let experience of experience" class="experience-item--padding">
+  <div class="experience-item">
+    <div class="experience-item--padding-right">
+      <img [src]="experience.image" alt="Brand logo" style="width: 100%">
+    </div>
+    <div class="experience-item__info">
+      <p>
+        {{experience.position}}
+      </p>
+      <p class="experience-item--font">
+        {{experience.company}}
+      </p>
+      <p class="experience-item--font">
+        {{experience.date}}
+      </p>
+    </div>
+  </div>
+  <p class="experience-item--font experience-item--italic experience-item--padding-bottom" >{{experience.desc}}</p>
+</div>

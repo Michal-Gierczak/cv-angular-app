@@ -1,0 +1,23 @@
+.skill-item {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.skill-item--padding {
+  padding-right: 1.5em;
+  padding-bottom: 2em;
+}
+
+.skill-item__name {
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 0.3em;
+}
+
+.skill-item__desc {
+  font-family: 'Roboto', sans-serif;
+  color:#666666;
+  font-size: 1em;
+  font-weight: 200;
+}

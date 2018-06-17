@@ -1,0 +1,25 @@
+.skills {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  color: #252525;
+  margin: 1.5em;
+}
+
+.skills__heading {
+  font-size: 1.6em;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 0.3em;
+}
+
+.skills__text {
+  font-family: 'Roboto', sans-serif;
+  color:#666666;
+  font-size: 1em;
+  font-weight: 200;
+  padding-bottom: 1em;
+}
+
+.skills--padding-right {
+  padding-right: 1.5em;
+}

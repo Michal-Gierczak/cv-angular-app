@@ -1,3 +1,10 @@
-<p>
-  skills-item works!
-</p>
+<div class="skill-item">
+  <div *ngFor="let skill of skills" class="skill-item--padding">
+    <p class="skill-item__name">
+      {{skill.name}}
+    </p>
+    <p class="skill-item__desc">
+      {{skill.description}}
+    </p>
+  </div>
+</div>

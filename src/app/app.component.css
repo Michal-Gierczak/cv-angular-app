@@ -1,0 +1,8 @@
+.container {
+  box-sizing: border-box;
+  width: 80%;
+  border-left: 0.15em solid #ECF0F1;
+  border-right: 0.15em solid #ECF0F1;
+  margin: auto;
+
+}

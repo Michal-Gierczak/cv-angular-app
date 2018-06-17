@@ -1,0 +1,41 @@
+.header {
+  height: 5.125em;
+  border-bottom: 0.1em solid #ECF0F1;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.header-logo {
+  padding-left: 1.5em;
+  font-size: 1.5em;
+  align-self: center;
+  color: #252525;
+}
+
+.header-menu {
+  list-style: none;
+  text-align: right;
+  align-self: center;
+}
+
+.header-menu li {
+  display: inline;
+  list-style: none;
+  padding-left: 1em;
+  font-size: 0.75em;
+  padding-right: 1em;
+  text-transform: uppercase;
+}
+
+.header-menu li a {
+  text-decoration: none;
+  color: #252525;
+}
+
+.header-menu li a:hover {
+  text-decoration: underline;
+  color: #69B6E1;
+  transition: color 0.3s;
+}

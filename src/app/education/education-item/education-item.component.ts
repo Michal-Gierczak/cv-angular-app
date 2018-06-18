@@ -9,7 +9,7 @@ import { Education } from '../education.model'
 })
 export class EducationItemComponent implements OnInit {
 
-  @Input() education: Education;
+  @Input() educations: Education;
 
   constructor() { }
 

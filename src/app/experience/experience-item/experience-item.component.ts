@@ -9,7 +9,7 @@ import {Experience} from '../experience.model'
 })
 export class ExperienceItemComponent implements OnInit {
 
-  @Input() experience: Experience;
+  @Input() experiences: Experience;
 
   constructor() { }
 

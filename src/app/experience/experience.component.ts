@@ -9,7 +9,7 @@ import { Experience } from './experience.model';
 })
 export class ExperienceComponent implements OnInit {
 
-  experience: Experience[] = [
+  experiences: Experience[] = [
     new Experience('Senior Front End Developer', 'Coresystems AG (via MIJA Software)', 'October, 2017 — Present',
      `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dicta eum eveniet facere facilis labore
      laboriosam numquam possimus voluptates? Atque autem blanditiis eaque magnam porro quod similique sint soluta

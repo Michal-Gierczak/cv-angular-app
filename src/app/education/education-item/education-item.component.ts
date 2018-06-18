@@ -5,7 +5,7 @@ import { Education } from '../education.model'
 @Component({
   selector: 'app-education-item',
   templateUrl: './education-item.component.html',
-  styleUrls: ['./education-item.component.css']
+  styleUrls: ['./education-item.component.scss']
 })
 export class EducationItemComponent implements OnInit {
 

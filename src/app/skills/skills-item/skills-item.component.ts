@@ -5,7 +5,7 @@ import { Skills } from '../skills.model';
 @Component({
   selector: 'app-skills-item',
   templateUrl: './skills-item.component.html',
-  styleUrls: ['./skills-item.component.css']
+  styleUrls: ['./skills-item.component.scss']
 })
 export class SkillsItemComponent implements OnInit {
 

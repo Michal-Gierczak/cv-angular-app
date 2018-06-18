@@ -8,7 +8,9 @@
       </p>
     </div>
     <div>
-      <app-experience-item></app-experience-item>
+      <app-experience-item
+        *ngFor="let experienceEl of experience"
+        [experience]="experienceEl"></app-experience-item>
     </div>
   </div>
 </div>

@@ -27,3 +27,8 @@
 .skills--padding-right {
   padding-right: 1.5em;
 }
+
+.skills-item--layout {
+  display: grid;
+  grid-template-columns: 50% 50%;  
+}

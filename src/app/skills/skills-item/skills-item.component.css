@@ -1,8 +1,3 @@
-.skill-item {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
 .skill-item--padding {
   padding-right: 1.5em;
   padding-bottom: 2em;

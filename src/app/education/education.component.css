@@ -1,0 +1,28 @@
+.education {
+  border-bottom: 0.08em solid #ECF0F1;
+}
+.education--layout {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  color: #252525;
+  margin: 1.5em;
+}
+
+.education__heading {
+  font-size: 1.6em;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 0.3em;
+}
+
+.education__text {
+  font-family: 'Roboto', sans-serif;
+  color:#666666;
+  font-size: 1em;
+  font-weight: 200;
+  padding-bottom: 1em;
+}
+
+.education--padding-right {
+  padding-right: 1.5em;
+}

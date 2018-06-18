@@ -1,0 +1,28 @@
+.education-item--padding-right {
+  padding-right: 2em;
+}
+
+.education-item--padding-bottom {
+  padding-bottom: 1.5em;
+}
+
+.education-item--small-padding-bottom {
+  padding-bottom: 0.4em;
+}
+
+.education-item__info {
+  font-size: 1em;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 0.3em;
+  align-self: center;
+}
+
+.education-item--font {
+  font-weight: 200;
+  font-family: 'Roboto', sans-serif;
+}
+
+.education-item--italic {
+  font-style: italic;
+}

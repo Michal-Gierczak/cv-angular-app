@@ -7,8 +7,10 @@
         passionate as I am about building something awesome.
       </p>
     </div>
-    <div>
-      <app-skills-item></app-skills-item>
+    <div class="skills-item--layout">
+      <app-skills-item
+         *ngFor="let skillsEl of skills"
+         [skills]="skillsEl"></app-skills-item>
     </div>
   </div>
 </div>

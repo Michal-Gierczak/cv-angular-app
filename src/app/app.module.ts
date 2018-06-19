@@ -12,6 +12,8 @@ import { EducationComponent } from './education/education.component';
 import { EducationItemComponent } from './education/education-item/education-item.component';
 import { AwardsComponent } from './awards/awards.component';
 import { FooterComponent } from './footer/footer.component';
+import { AwardsItemComponent } from './awards/awards-item/awards-item.component';
+
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { FooterComponent } from './footer/footer.component';
     EducationComponent,
     EducationItemComponent,
     AwardsComponent,
-    FooterComponent,    
+    FooterComponent,
+    AwardsItemComponent,
   ],
   imports: [
     BrowserModule

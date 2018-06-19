@@ -1,3 +1,15 @@
-<p>
-  awards works!
-</p>
+<div class="awards">
+  <div class="awards--layout">
+    <div class="awards--padding-right">
+      <h1 class="awards__heading">Awards<span style="color: #69B6E1">.</span></h1>
+      <p class="awards__text">
+        Some text about my awards. Here you need to put some text describing your awards section.
+      </p>
+    </div>
+    <div>
+      <app-awards-item
+        *ngFor="let award of awards"
+        [awards]="award"></app-awards-item>
+    </div>
+  </div>
+</div>

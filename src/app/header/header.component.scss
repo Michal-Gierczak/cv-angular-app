@@ -5,6 +5,9 @@
   font-weight: 700;
   display: grid;
   grid-template-columns: 50% 50%;
+  position: sticky;
+  top:0;
+  background-color: #FFF;
 }
 
 .header__logo {

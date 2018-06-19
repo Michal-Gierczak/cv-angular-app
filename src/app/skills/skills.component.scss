@@ -1,34 +1,35 @@
 .skills {
-  border-bottom: 0.08em solid #ECF0F1;;
+  border-bottom: 0.1rem solid #ECF0F1;;
 }
 
 .skills--layout {
   display: grid;
   grid-template-columns: 33% 67%;
   color: #252525;
-  margin: 1.5em;
+  margin: 4rem 2rem;
+
 }
 
 .skills__heading {
-  font-size: 1.6em;
+  font-size: 3rem;
   font-weight: 700;
   font-family: 'Lato', sans-serif;
-  padding-bottom: 0.3em;
+  padding-bottom: 0.3rem;
 }
 
 .skills__text {
   font-family: 'Roboto', sans-serif;
   color:#666666;
-  font-size: 1em;
+  font-size: 1.6rem;
   font-weight: 200;
-  padding-bottom: 1em;
+  padding-bottom: 1.6rem;
 }
 
 .skills--padding-right {
-  padding-right: 1.5em;
+  padding-right: 3rem;
 }
 
 .skills-item--layout {
   display: grid;
-  grid-template-columns: 50% 50%;  
+  grid-template-columns: 50% 50%;
 }

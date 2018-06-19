@@ -4,16 +4,16 @@
       <img [src]="experiences.image" alt="Brand logo" style="width: 100%">
     </div>
     <div class="experience-item__info">
-      <p>
+      <div class="experience-item--padding-bottom">
         {{experiences.position}}
-      </p>
-      <p class="experience-item--font">
+      </div>
+      <div class="experience-item--font experience-item--padding-bottom">
         {{experiences.company}}
-      </p>
-      <p class="experience-item--font">
+      </div>
+      <div class="experience-item--font experience-item--padding-bottom">
         {{experiences.date}}
-      </p>
+      </div>
     </div>
   </div>
-  <p class="experience-item--font experience-item--italic experience-item--padding-bottom" >{{experiences.desc}}</p>
+  <p class="experience-item--font experience-item--italic" >{{experiences.desc}}</p>
 </div>

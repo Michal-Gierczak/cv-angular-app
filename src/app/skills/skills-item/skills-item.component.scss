@@ -1,18 +1,18 @@
-S.skill-item--padding {
-  padding-right: 1.5em;
-  padding-bottom: 2em;
+.skill-item--padding {
+  padding-right: 3rem;
+  padding-bottom: 2.5rem;
 }
 
 .skill-item__name {
-  font-size: 1.2em;
+  font-size: 1.8rem;
   font-weight: 700;
   font-family: 'Lato', sans-serif;
-  padding-bottom: 0.3em;
+  padding-bottom: 0.4rem;
 }
 
 .skill-item__desc {
   font-family: 'Roboto', sans-serif;
   color:#666666;
-  font-size: 1em;
+  font-size: 1.6rem;
   font-weight: 200;
 }

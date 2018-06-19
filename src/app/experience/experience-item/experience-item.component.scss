@@ -4,26 +4,29 @@
 }
 
 .experience-item--padding-right {
-  padding-right: 2em;
+  padding-right: 2.5rem;
 }
 
-.experience-item--padding-bottom {
-  padding-bottom: 1.3em;
-}
 
 .experience-item__info {
-  font-size: 1em;
+  font-size: 1.8rem;
   font-weight: 700;
   font-family: 'Lato', sans-serif;
-  padding-bottom: 0.3em;
+  padding-bottom: 0.4rem;
   align-self: center;
 }
 
 .experience-item--font {
-  font-weight: 200;
   font-family: 'Roboto', sans-serif;
+  color:#666666;
+  font-size: 1.6rem;
+  font-weight: 200;
 }
 
 .experience-item--italic {
   font-style: italic;
+}
+
+.experience-item--padding-bottom {
+  padding-bottom: 0.8rem;
 }

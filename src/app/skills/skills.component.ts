@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Skills } from './skills.model';
+import { SkillsService } from './skills.service';
+import { SectionDescriptionService } from '.././shared/section-description.service';
 
 
 @Component({
@@ -9,12 +11,17 @@ import { Skills } from './skills.model';
 })
 export class SkillsComponent  {
 
-  skills: Skills[] = [
-    new Skills('Web Development', 'Javascript, Coffeescript, JAVA, Python, PHP, Go, Node.js, MongoDB, Redis, PostgreSQL, WebStorm.'),
-    new Skills("UI\\UX Design", 'Photoshop, Illustrator, Sketch, Axure, XMind, Prototyping, Wireframing, User Research, Usability Testing.'),
-    new Skills("Frontend Development", 'HTML, CSS, LESS, SASS, Bootstrap, Wordpress, Drupal, Phonegap / Cordova, Ionic, Foundation, Angular.js.'),
-    new Skills("Consulting & SEO Audit", 'Screaming Frog, Woorank, Raventools, Semrush, Moz, WebCEO, Google Analytics, ChartBeat, CrazyEgg.')
-  ];
+  skills: Skills[] = [];
+  skillsDesc: string = '';
 
-    constructor() {}
+    constructor(private skillService: SkillsService, private sectionDescription: SectionDescriptionService) {}
+
+    ngOnInit() {
+      this.skillService.getSkills().subscribe(skills => {
+        this.skills = skills;
+      })
+      this.sectionDescription.getSectionDescription().subscribe(section => {
+        this.skillsDesc = section[0].skills;        
+      })
+    }
   }

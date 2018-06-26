@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Education } from './education.model';
 import { EducationService } from './education.service';
+import { SectionDescriptionService } from '.././shared/section-description.service';
 
 @Component({
   selector: 'app-education',
@@ -13,17 +14,16 @@ export class EducationComponent implements OnInit {
   educations: Education[] = [];
   educationDesc: string = '';
 
-  constructor(private educationService: EducationService) { }
+  constructor(private educationService: EducationService, private sectionDescription: SectionDescriptionService) { }
 
   ngOnInit() {
     this.educationService.getEducations().subscribe(educations => {
       this.educations = educations;
-      for(let education of this.educations) {
-        if (education['educationDesc']) {
-          this.educationDesc = education.educationDesc;
-        }
-      }
     })
+    this.sectionDescription.getSectionDescription().subscribe(section => {
+      this.educationDesc = section[0].educations;        
+    })
+
   }
 
 }

@@ -20,6 +20,8 @@ import { AwardsItemComponent } from './awards/awards-item/awards-item.component'
 import { ExperienceService } from './experience/experience.service';
 import { AwardsService } from './awards/awards.service';
 import { EducationService } from './education/education.service';
+import { SkillsService } from './skills/skills.service';
+import { SectionDescriptionService } from './shared/section-description.service';
 
 
 @NgModule({
@@ -42,7 +44,7 @@ import { EducationService } from './education/education.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],
-  providers: [ExperienceService, AwardsService, EducationService],
+  providers: [ExperienceService, AwardsService, EducationService, SkillsService, SectionDescriptionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

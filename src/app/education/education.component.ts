@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Education } from './education.model';
+import { EducationService } from './education.service';
 
 @Component({
   selector: 'app-education',
@@ -9,14 +10,20 @@ import { Education } from './education.model';
 })
 export class EducationComponent implements OnInit {
 
-  educations: Education[] = [
-    new Education('Google Developer Training', 'Google', 'Apr, 2015 — May, 2015', 'Learn to use App Engine, Google\'s Platform as a Service, to build the backend for web apps that scale not only as your user base grows but as request volumes peaks with sudden demand.'),
-    new Education('Software Development', 'Boston University','Jan, 2005 — May, 2009', 'BSc (Hons) in Software Development. Outstanding Academic Achievement Award.')
-  ]
+  educations: Education[] = [];
+  educationDesc: string = '';
 
-  constructor() { }
+  constructor(private educationService: EducationService) { }
 
   ngOnInit() {
+    this.educationService.getEducations().subscribe(educations => {
+      this.educations = educations;
+      for(let education of this.educations) {
+        if (education['educationDesc']) {
+          this.educationDesc = education.educationDesc;
+        }
+      }
+    })
   }
 
 }

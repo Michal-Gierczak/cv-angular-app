@@ -22,7 +22,7 @@ export class ExperienceComponent implements OnInit {
         if (experience['expDesc']) {
           this.expDesc = experience.expDesc;
         }
-      }
+      }      
     })
   }
 

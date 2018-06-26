@@ -18,6 +18,9 @@ import { FooterComponent } from './footer/footer.component';
 import { AwardsItemComponent } from './awards/awards-item/awards-item.component';
 
 import { ExperienceService } from './experience/experience.service';
+import { AwardsService } from './awards/awards.service';
+import { EducationService } from './education/education.service';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +42,7 @@ import { ExperienceService } from './experience/experience.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],
-  providers: [ExperienceService],
+  providers: [ExperienceService, AwardsService, EducationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

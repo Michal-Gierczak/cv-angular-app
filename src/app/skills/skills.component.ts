@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Skills } from './skills.model';
+
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent  {
 
   skills: Skills[] = [
     new Skills('Web Development', 'Javascript, Coffeescript, JAVA, Python, PHP, Go, Node.js, MongoDB, Redis, PostgreSQL, WebStorm.'),
@@ -16,9 +16,5 @@ export class SkillsComponent implements OnInit {
     new Skills("Consulting & SEO Audit", 'Screaming Frog, Woorank, Raventools, Semrush, Moz, WebCEO, Google Analytics, ChartBeat, CrazyEgg.')
   ];
 
-  constructor() { }
-
-  ngOnInit() {
+    constructor() {}
   }
-
-}

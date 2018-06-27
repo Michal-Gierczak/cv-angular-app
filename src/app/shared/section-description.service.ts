@@ -20,11 +20,7 @@ export class SectionDescriptionService {
         return data;
       });
   }));
-  }
-
-  getSectionDescription() {
-    return this.sectionDescriptions;
-  }
+  }  
 }
 interface SectionDesc {
     id?: string;

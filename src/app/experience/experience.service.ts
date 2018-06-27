@@ -12,7 +12,9 @@ export class ExperienceService {
   experiences: Observable<any[]>;
 
   constructor(public afs: AngularFirestore) {
-    this.experiences = this.afs.collection('experiences').valueChanges();
+    this.experiences = this.afs.collection('experiences', ref => {
+      return ref.orderBy('order', 'desc')
+    }).valueChanges();
   }
 
   getExperiences() {

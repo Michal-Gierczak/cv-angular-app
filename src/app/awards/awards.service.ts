@@ -12,7 +12,9 @@ export class AwardsService {
   awards: Observable<any>;
 
   constructor(public afs: AngularFirestore) {
-    this.awards = this.afs.collection('awards').valueChanges();
+    this.awards = this.afs.collection('awards', ref => {
+      return ref.orderBy('order', 'desc')
+    }).valueChanges();
   }
 
   getAwards() {

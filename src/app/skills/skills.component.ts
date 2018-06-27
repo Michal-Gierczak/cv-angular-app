@@ -12,15 +12,13 @@ import { Observable } from 'rxjs';
 })
 export class SkillsComponent  {
 
-  skills: Skills[] = [];
-  skillsDesc$: Observable<{}>;
+  skills$: Observable<Skills[]>;
+  sectionDescriptions$: Observable<{}>;
 
     constructor(private skillService: SkillsService, private sectionDescription: SectionDescriptionService) {}
 
     ngOnInit() {
-      this.skillService.getSkills().subscribe(skills => {
-        this.skills = skills;
-      })
-      this.skillsDesc$ = this.sectionDescription.getSectionDescription();
+      this. skills$ = this.skillService.getSkills();
+      this.sectionDescriptions$ = this.sectionDescription.getSectionDescription();
     }
   }

@@ -2,13 +2,14 @@
   <div class="education--layout">
     <div class="education--padding-right">
       <h1 class="education__heading">Education<span style="color: #69B6E1">.</span></h1>
-      <p class="education__text">
-          {{ (educationDesc$ | async)[0].educations }}
+      <p class="education__text"
+        *ngFor="let desc of (sectionDescriptions$ | async)">
+        {{ desc.educations }}
       </p>
     </div>
     <div>
       <app-education-item
-        *ngFor="let education of educations"
+        *ngFor="let education of educations$ | async"
         [educations]="education"></app-education-item>
     </div>
   </div>

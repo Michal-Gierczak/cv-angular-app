@@ -12,16 +12,14 @@ import { Observable } from 'rxjs';
 })
 export class AwardsComponent implements OnInit {
 
-  awards: Awards[] = [];
-  awardsDesc$: Observable<{}>;
+  awards$: Observable<Awards[]>;
+  sectionDescriptions$: Observable<{}>;
 
   constructor(private awardsService: AwardsService, private sectionDescription: SectionDescriptionService) { }
 
   ngOnInit() {
-    this.awardsService.getAwards().subscribe(awards => {
-      this.awards = awards;
-    });
-    this.awardsDesc$ = this.sectionDescription.getSectionDescription();
+    this.awards$ = this.awardsService.getAwards();
+    this.sectionDescriptions$ = this.sectionDescription.getSectionDescription();
 
   }
 

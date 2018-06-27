@@ -12,16 +12,14 @@ import { Observable } from 'rxjs';
 })
 export class EducationComponent implements OnInit {
 
-  educations: Education[] = [];
-  educationDesc$: Observable<{}>;
+  educations$: Observable<Education[]>;
+  sectionDescriptions$: Observable<{}>;
 
   constructor(private educationService: EducationService, private sectionDescription: SectionDescriptionService) { }
 
   ngOnInit() {
-    this.educationService.getEducations().subscribe(educations => {
-      this.educations = educations;
-    })
-    this.educationDesc$ = this.sectionDescription.getSectionDescription();
+    this.educations$ = this.educationService.getEducations();
+    this.sectionDescriptions$ = this.sectionDescription.getSectionDescription();
   }
 
 }

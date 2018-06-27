@@ -13,12 +13,12 @@ import { Observable } from 'rxjs';
 export class ExperienceComponent implements OnInit {
 
   experiences$: Observable<Experience[]>;
-  expDesc$: Observable<{}>;
+  sectionDescriptions$: Observable<{}>;
 
   constructor(private experienceService: ExperienceService, private sectionDescription: SectionDescriptionService) { }
 
   ngOnInit() {
     this.experiences$ = this.experienceService.getExperiences();
-    this.expDesc$ = this.sectionDescription.getSectionDescription();
+    this.sectionDescriptions$ = this.sectionDescription.getSectionDescription();
     }
   }

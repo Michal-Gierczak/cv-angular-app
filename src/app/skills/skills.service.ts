@@ -12,7 +12,9 @@ export class SkillsService {
   skills: Observable<any[]>;
 
   constructor(public afs: AngularFirestore) {
-    this.skills = this.afs.collection('skills').valueChanges();
+    this.skills = this.afs.collection('skills', ref => {
+      return ref.orderBy('order', 'asc')
+    }).valueChanges();
   }
 
   getSkills() {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Skills } from './skills.model';
 import { SkillsService } from './skills.service';
 import { SectionDescriptionService } from '.././shared/section-description.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { SectionDescriptionService } from '.././shared/section-description.servi
 export class SkillsComponent  {
 
   skills: Skills[] = [];
-  skillsDesc: string = '';
+  skillsDesc$: Observable<{}>;
 
     constructor(private skillService: SkillsService, private sectionDescription: SectionDescriptionService) {}
 
@@ -20,8 +21,6 @@ export class SkillsComponent  {
       this.skillService.getSkills().subscribe(skills => {
         this.skills = skills;
       })
-      this.sectionDescription.getSectionDescription().subscribe(section => {
-        this.skillsDesc = section[0].skills;        
-      })
+      this.skillsDesc$ = this.sectionDescription.getSectionDescription();
     }
   }

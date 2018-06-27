@@ -3,12 +3,12 @@
     <div class="experience--padding-right">
       <h1 class="experience__heading">Experience<span style="color: #69B6E1">.</span></h1>
       <p class="experience__text">
-        {{expDesc}}
+        {{ (expDesc$ | async)[0].experiences}}
       </p>
     </div>
     <div>
       <app-experience-item
-        *ngFor="let experience of experiences"
+        *ngFor="let experience of experiences$ | async"
         [experiences]="experience"></app-experience-item>
     </div>
   </div>

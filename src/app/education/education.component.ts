@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Education } from './education.model';
 import { EducationService } from './education.service';
 import { SectionDescriptionService } from '.././shared/section-description.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-education',
@@ -12,7 +13,7 @@ import { SectionDescriptionService } from '.././shared/section-description.servi
 export class EducationComponent implements OnInit {
 
   educations: Education[] = [];
-  educationDesc: string = '';
+  educationDesc$: Observable<{}>;
 
   constructor(private educationService: EducationService, private sectionDescription: SectionDescriptionService) { }
 
@@ -20,10 +21,7 @@ export class EducationComponent implements OnInit {
     this.educationService.getEducations().subscribe(educations => {
       this.educations = educations;
     })
-    this.sectionDescription.getSectionDescription().subscribe(section => {
-      this.educationDesc = section[0].educations;        
-    })
-
+    this.educationDesc$ = this.sectionDescription.getSectionDescription();
   }
 
 }

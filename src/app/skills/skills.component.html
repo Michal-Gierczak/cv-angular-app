@@ -3,7 +3,7 @@
     <div class="skills--padding-right">
       <h1 class="skills__heading">Skills<span style="color: #69B6E1">.</span></h1>
       <p class="skills__text">
-        {{skillsDesc}}
+          {{ (skillsDesc$ | async) }}
       </p>
     </div>
     <div class="skills-item--layout">

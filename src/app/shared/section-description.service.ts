@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class SectionDescriptionService {
 
   sectionDescriptionColletion:AngularFirestoreCollection<{}>;
-  sectionDescriptions: Observable<any>;
+  sectionDescriptions: Observable<{}>;
 
   constructor(public afs: AngularFirestore) {
     this.sectionDescriptions = this.afs.collection('sectionsDescription').valueChanges();

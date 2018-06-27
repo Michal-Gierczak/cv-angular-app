@@ -3,7 +3,7 @@
     <div class="education--padding-right">
       <h1 class="education__heading">Education<span style="color: #69B6E1">.</span></h1>
       <p class="education__text">
-        {{educationDesc}}
+          {{ (educationDesc$ | async)[0].educations }}
       </p>
     </div>
     <div>

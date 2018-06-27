@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Experience } from './experience.model';
 import { ExperienceService } from './experience.service';
 import { SectionDescriptionService } from '.././shared/section-description.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-experience',
@@ -11,17 +12,13 @@ import { SectionDescriptionService } from '.././shared/section-description.servi
 })
 export class ExperienceComponent implements OnInit {
 
-  experiences: Experience[] = [];
-  expDesc: string = "";
+  experiences$: Observable<Experience[]>;
+  expDesc$: Observable<{}>;
 
   constructor(private experienceService: ExperienceService, private sectionDescription: SectionDescriptionService) { }
 
   ngOnInit() {
-    this.experienceService.getExperiences().subscribe(experiences => {
-      this.experiences = experiences;
-    })
-    this.sectionDescription.getSectionDescription().subscribe(section => {
-      this.expDesc = section[0].experiences;
-    })
+    this.experiences$ = this.experienceService.getExperiences();
+    this.expDesc$ = this.sectionDescription.getSectionDescription();
+    }
   }
-}

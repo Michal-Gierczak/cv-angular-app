@@ -9,13 +9,13 @@ import { Description } from '.././shared/description.model';
 export class AwardsService {
 
   awardsColletion:AngularFirestoreCollection<Awards>;
-  awards: Observable<{}[]>;
+  awards: Observable<Awards[]>;
 
   awardDoc: AngularFirestoreDocument<Description>;
-  awardDesc: Observable<any>;
+  awardDesc: Observable<Description>;
 
   constructor(public afs: AngularFirestore) {
-    this.awards = this.afs.collection('awards', ref => {
+    this.awards = this.afs.collection<Awards>('awards', ref => {
       return ref.orderBy('order', 'desc')
     }).valueChanges();
     this.awardDoc = this.afs.doc('descriptions/award');

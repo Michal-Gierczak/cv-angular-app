@@ -1,11 +1,11 @@
 export class Skills {
   public name: string;
   public description: string;
-  public skillsDesc ?: string;
+  public order ?: number;
 
-  constructor(name: string, desc: string, skillsDesc?:string) {
+  constructor(name: string, desc: string, order?:number) {
     this.name = name;
     this.description = desc;
-    this.skillsDesc = skillsDesc;
+    this.order = order;
   }
 }

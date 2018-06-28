@@ -3,9 +3,9 @@ export class Awards {
   public place: string;
   public date: string;
   public description: string;
-  public order?: string;
+  public order?: number;
 
-  constructor(name: string, place: string, date: string, desc: string, order?:string) {
+  constructor(name: string, place: string, date: string, desc: string, order?:number) {
     this.name = name;
     this.description = desc;
     this.place = place;

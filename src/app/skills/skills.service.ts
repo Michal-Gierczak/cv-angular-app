@@ -8,13 +8,13 @@ import { Description } from '.././shared/description.model';
 export class SkillsService {
 
   skillsColletion:AngularFirestoreCollection<Skills>;
-  skills: Observable<{}[]>;
+  skills: Observable<Skills[]>;
 
   skillDoc: AngularFirestoreDocument<Description>;
-  skillDesc: Observable<any>;
+  skillDesc: Observable<Description>;
 
   constructor(public afs: AngularFirestore) {
-    this.skills = this.afs.collection('skills', ref => {
+    this.skills = this.afs.collection<Skills>('skills', ref => {
       return ref.orderBy('order', 'asc')
     }).valueChanges();
     this.skillDoc = this.afs.doc('descriptions/experience');

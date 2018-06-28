@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Education } from './education.model';
 import { EducationService } from './education.service';
 import { Observable } from 'rxjs';
+import { Description } from '.././shared/description.model';
 
 @Component({
   selector: 'app-education',
@@ -11,8 +12,8 @@ import { Observable } from 'rxjs';
 })
 export class EducationComponent {
 
-  educations$: Observable<{}[]> = this.educationService.educations;
-  educationDesc$: Observable<{}[]> = this.educationService.educationDesc;
+  educations$: Observable<Education[]> = this.educationService.educations;
+  educationDesc$: Observable<Description> = this.educationService.educationDesc;
 
   constructor(private educationService: EducationService) { }
 }

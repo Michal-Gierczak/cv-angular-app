@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Awards } from './awards.model';
 import { AwardsService } from './awards.service';
 import { Observable } from 'rxjs';
+import { Description } from '.././shared/description.model';
 
 @Component({
   selector: 'app-awards',
@@ -11,8 +12,8 @@ import { Observable } from 'rxjs';
 })
 export class AwardsComponent {
 
-  awards$: Observable<{}[]> = this.awardsService.awards;
-  awardDesc$: Observable<{}[]> = this.awardsService.awardDesc;
+  awards$: Observable<Awards[]> = this.awardsService.awards;
+  awardDesc$: Observable<Description> = this.awardsService.awardDesc;
 
   constructor(private awardsService: AwardsService) {}
 }

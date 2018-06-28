@@ -3,13 +3,13 @@ export class Education {
   public company: string;
   public date: string;
   public desc: string;
-  public educationDesc?: string;
+  public order?: string;
 
-  constructor(position: string, company:string, startDate: string, desc: string, educationDesc?:string) {
+  constructor(company: string, date:string, desc: string, position: string, order?:string) {
     this.position = position;
     this.company = company;
-    this.date = startDate;
+    this.date = date;
     this.desc = desc;
-    this.educationDesc = educationDesc;
+    this.order = order;
   }
 }

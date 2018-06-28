@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { Education } from './education.model';
 import { EducationService } from './education.service';
-import { SectionDescriptionService } from '.././shared/section-description.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -12,14 +11,13 @@ import { Observable } from 'rxjs';
 })
 export class EducationComponent implements OnInit {
 
-  educations$: Observable<Education[]>;
-  sectionDescriptions$: Observable<{}>;
+  educations$: Observable<{}[]>;
+  educationDesc$: Observable<{}[]>;
 
-  constructor(private educationService: EducationService, private sectionDescription: SectionDescriptionService) { }
+  constructor(private educationService: EducationService) { }
 
   ngOnInit() {
-    this.educations$ = this.educationService.getEducations();
-    this.sectionDescriptions$ = this.sectionDescription.sectionDescriptions;
+    this.educations$ = this.educationService.educations;
+    this.educationDesc$ = this.educationService.educationDesc;
   }
-
 }

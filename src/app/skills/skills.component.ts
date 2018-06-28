@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Skills } from './skills.model';
 import { SkillsService } from './skills.service';
-import { SectionDescriptionService } from '.././shared/section-description.service';
 import { Observable } from 'rxjs';
 
 
@@ -12,13 +11,13 @@ import { Observable } from 'rxjs';
 })
 export class SkillsComponent  {
 
-  skills$: Observable<Skills[]>;
-  sectionDescriptions$: Observable<{}>;
+  skills$: Observable<{}[]>;
+  skillDesc$: Observable<{}[]>;
 
-    constructor(private skillService: SkillsService, private sectionDescription: SectionDescriptionService) {}
+    constructor(private skillService: SkillsService) {}
 
     ngOnInit() {
-      this. skills$ = this.skillService.getSkills();
-      this.sectionDescriptions$ = this.sectionDescription.sectionDescriptions;
+      this. skills$ = this.skillService.skills;
+      this.skillDesc$ = this.skillService.skillDesc;
     }
   }

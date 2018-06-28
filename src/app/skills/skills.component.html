@@ -2,9 +2,8 @@
   <div class="skills--layout">
     <div class="skills--padding-right">
       <h1 class="skills__heading">Skills<span style="color: #69B6E1">.</span></h1>
-      <p class="skills__text"
-        *ngFor="let desc of (sectionDescriptions$ | async)">
-      {{ desc.skills }}
+      <p class="skills__text">
+      {{ (skillDesc$ | async )?.desc }}
       </p>
     </div>
     <div class="skills-item--layout">

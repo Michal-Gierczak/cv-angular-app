@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Skills } from './skills.model';
 import { SkillsService } from './skills.service';
 import { Observable } from 'rxjs';
@@ -11,13 +11,8 @@ import { Observable } from 'rxjs';
 })
 export class SkillsComponent  {
 
-  skills$: Observable<{}[]>;
-  skillDesc$: Observable<{}[]>;
+  skills$: Observable<{}[]> = this.skillService.skills;
+  skillDesc$: Observable<{}[]> = this.skillService.skillDesc;
 
     constructor(private skillService: SkillsService) {}
-
-    ngOnInit() {
-      this. skills$ = this.skillService.skills;
-      this.skillDesc$ = this.skillService.skillDesc;
-    }
   }

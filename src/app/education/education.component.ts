@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Education } from './education.model';
 import { EducationService } from './education.service';
@@ -9,15 +9,10 @@ import { Observable } from 'rxjs';
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.scss']
 })
-export class EducationComponent implements OnInit {
+export class EducationComponent {
 
-  educations$: Observable<{}[]>;
-  educationDesc$: Observable<{}[]>;
+  educations$: Observable<{}[]> = this.educationService.educations;
+  educationDesc$: Observable<{}[]> = this.educationService.educationDesc;
 
   constructor(private educationService: EducationService) { }
-
-  ngOnInit() {
-    this.educations$ = this.educationService.educations;
-    this.educationDesc$ = this.educationService.educationDesc;
-  }
 }

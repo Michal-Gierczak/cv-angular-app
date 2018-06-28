@@ -3,13 +3,13 @@ export class Awards {
   public place: string;
   public date: string;
   public description: string;
-  public awardsDesc?: string;
+  public order?: string;
 
-  constructor(name: string, place: string, date: string, desc: string, awardsDesc?:string) {
+  constructor(name: string, place: string, date: string, desc: string, order?:string) {
     this.name = name;
     this.description = desc;
     this.place = place;
     this.date = date;
-    this.awardsDesc = awardsDesc;
+    this.order = order;
   }
 }

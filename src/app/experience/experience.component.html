@@ -2,9 +2,8 @@
   <div class="experience--layout">
     <div class="experience--padding-right">
       <h1 class="experience__heading">Experience<span style="color: #69B6E1">.</span></h1>
-      <p class="experience__text"
-        *ngFor="let desc of (sectionDescriptions$ | async)">
-        {{ desc.experiences }}
+      <p class="experience__text">
+        {{ (experienceDesc$ | async )?.desc }}      
       </p>
     </div>
     <div>

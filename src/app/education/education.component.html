@@ -2,9 +2,8 @@
   <div class="education--layout">
     <div class="education--padding-right">
       <h1 class="education__heading">Education<span style="color: #69B6E1">.</span></h1>
-      <p class="education__text"
-        *ngFor="let desc of (sectionDescriptions$ | async)">
-        {{ desc.educations }}
+      <p class="education__text">
+        {{ (educationDesc$ | async )?.desc }}  
       </p>
     </div>
     <div>

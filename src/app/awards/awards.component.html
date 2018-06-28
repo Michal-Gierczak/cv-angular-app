@@ -2,9 +2,8 @@
   <div class="awards--layout">
     <div class="awards--padding-right">
       <h1 class="awards__heading">Awards<span style="color: #69B6E1">.</span></h1>
-      <p class="awards__text"
-        *ngFor="let desc of (sectionDescriptions$ | async)">
-        {{ desc.awards }}
+      <p class="awards__text">
+        {{ (awardDesc$ | async )?.desc }}
       </p>
     </div>
     <div>

@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AngularFireStorage } from 'angularfire2/storage';
+import { Observable } from 'rxjs';
 
-import {Experience} from '../experience.model'
+import {Experience} from '../experience.model';
 
 @Component({
   selector: 'app-experience-item',
@@ -9,11 +11,14 @@ import {Experience} from '../experience.model'
 })
 export class ExperienceItemComponent implements OnInit {
 
-  @Input() experiences: Experience;
+  @Input('experiences') experiences: Experience;
+  imageUrl: Observable<string | null>;
 
-  constructor() { }
+  constructor(private storage: AngularFireStorage) {}
 
   ngOnInit() {
-  }
+    const ref = this.storage.ref(this.experiences.image);
+    this.imageUrl = ref.getDownloadURL();
+    }
 
-}
+  }

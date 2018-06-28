@@ -19,7 +19,7 @@ export class EducationComponent implements OnInit {
 
   ngOnInit() {
     this.educations$ = this.educationService.getEducations();
-    this.sectionDescriptions$ = this.sectionDescription.getSectionDescription();
+    this.sectionDescriptions$ = this.sectionDescription.sectionDescriptions;
   }
 
 }

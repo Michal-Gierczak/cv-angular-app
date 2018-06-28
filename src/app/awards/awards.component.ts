@@ -19,7 +19,7 @@ export class AwardsComponent implements OnInit {
 
   ngOnInit() {
     this.awards$ = this.awardsService.getAwards();
-    this.sectionDescriptions$ = this.sectionDescription.getSectionDescription();
+    this.sectionDescriptions$ = this.sectionDescription.sectionDescriptions;
 
   }
 

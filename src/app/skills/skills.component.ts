@@ -19,6 +19,6 @@ export class SkillsComponent  {
 
     ngOnInit() {
       this. skills$ = this.skillService.getSkills();
-      this.sectionDescriptions$ = this.sectionDescription.getSectionDescription();
+      this.sectionDescriptions$ = this.sectionDescription.sectionDescriptions;
     }
   }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Skills } from './skills.model';
 import { SkillsService } from './skills.service';
 import { Observable } from 'rxjs';
+import { Description } from '.././shared/description.model';
 
 
 @Component({
@@ -11,8 +12,8 @@ import { Observable } from 'rxjs';
 })
 export class SkillsComponent  {
 
-  skills$: Observable<{}[]> = this.skillService.skills;
-  skillDesc$: Observable<{}[]> = this.skillService.skillDesc;
+  skills$: Observable<Skills[]> = this.skillService.skills;
+  skillDesc$: Observable<Description> = this.skillService.skillDesc;
 
     constructor(private skillService: SkillsService) {}
   }

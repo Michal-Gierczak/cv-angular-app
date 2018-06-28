@@ -3,9 +3,9 @@ export class Education {
   public company: string;
   public date: string;
   public desc: string;
-  public order?: string;
+  public order?: number;
 
-  constructor(company: string, date:string, desc: string, position: string, order?:string) {
+  constructor(company: string, date:string, desc: string, position: string, order?:number) {
     this.position = position;
     this.company = company;
     this.date = date;

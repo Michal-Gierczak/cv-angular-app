@@ -8,13 +8,13 @@ import { Description } from '.././shared/description.model';
 export class ExperienceService {
 
   experiencesColletion:AngularFirestoreCollection<Experience>;
-  experiences: Observable<{}[]>;
+  experiences: Observable<Experience[]>;
 
   experienceDoc: AngularFirestoreDocument<Description>;
-  experienceDesc: Observable<any>;
+  experienceDesc: Observable<Description>;
 
   constructor(public afs: AngularFirestore) {
-    this.experiences = this.afs.collection('experiences', ref => {
+    this.experiences = this.afs.collection<Experience>('experiences', ref => {
       return ref.orderBy('order', 'desc')
     }).valueChanges();
     this.experienceDoc = this.afs.doc('descriptions/experience');

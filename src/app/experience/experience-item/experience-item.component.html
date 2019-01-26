@@ -1,7 +1,7 @@
 <div class="experience-item--padding">
   <div class="experience-item">
     <div class="experience-item--padding-right">
-      <img [src]="experiences.image" alt="Brand logo" style="width: 100%">
+      <img [src]="imageUrl | async"  alt="Brand logo" style="width: 100%">
     </div>
     <div class="experience-item__info">
       <div class="experience-item--padding-bottom">

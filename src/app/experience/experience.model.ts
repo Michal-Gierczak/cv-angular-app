@@ -6,7 +6,7 @@ export class Experience {
   public image: string;
   public order?: number;
 
-  constructor(position: string, company:string, startDate: string, desc: string, image: string, order?:number) {
+  constructor(position: string, company: string, startDate: string, desc: string, image: string, order?: number) {
     this.position = position;
     this.company = company;
     this.date = startDate;

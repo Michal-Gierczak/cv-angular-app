@@ -5,6 +5,7 @@ import { ExperienceService } from './experience.service';
 import { Observable } from 'rxjs';
 import { Description } from '.././shared/description.model';
 
+
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
@@ -14,6 +15,7 @@ export class ExperienceComponent {
 
   experiences$: Observable<Experience[]> = this.experienceService.experiences;
   experienceDesc$: Observable<Description> = this.experienceService.experienceDesc;
+
 
   constructor(private experienceService: ExperienceService) { }
   }
